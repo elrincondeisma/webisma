@@ -17,18 +17,33 @@ Hemos creado una landing page moderna, llamativa y optimizada para la comunidad 
 - **`Navbar.astro`**: Navegación responsiva con menú móvil, botón de "Área Clientes" y selector de tema.
 - **`Hero.astro`**: Sección principal con título llamativo, gradientes animados y CTAs claros.
 - **`Services.astro`**: Grid de servicios (Asesorías, Automatizaciones, etc.) con iconos SVG.
-- **`Videos.astro`**: Muestra videos obtenidos de la colección de contenido `src/content/videos`.
+- **`Videos.astro`**: Muestra los últimos videos del canal de YouTube obtenidos vía API y cacheados en build-time.
+- **`Shorts.astro`**: Muestra los últimos YouTube Shorts con diseño vertical optimizado para contenido corto.
 - **`News.astro`**: Muestra noticias obtenidas de la colección de contenido `src/content/news`.
 - **`Footer.astro`**: Pie de página con enlaces a redes sociales y copyright.
 
 ## Gestión de Contenido
 
-El contenido de **Videos** y **Noticias** ahora se gestiona a través de **Astro Content Collections**:
+### Videos de YouTube (Caché Automático)
 
-- **Videos**: Archivos `.mdx` en `src/content/videos/`.
-- **Noticias**: Archivos `.mdx` en `src/content/news/`.
+Los videos se obtienen **automáticamente** de la API de YouTube durante cada build y se separan en dos categorías:
 
-Para añadir nuevo contenido, simplemente crea un nuevo archivo MDX en la carpeta correspondiente siguiendo el esquema definido en `src/content/config.ts`.
+- **Videos regulares** (>60 segundos): Mostrados en la sección "Últimos Videos"
+- **Shorts** (<60 segundos): Mostrados en la sección "Shorts" con diseño vertical
+
+**Funcionamiento:**
+- **Script**: `scripts/fetch-youtube.js` obtiene los últimos 12 videos del canal y los categoriza por duración.
+- **Caché**: Los datos se guardan en `src/data/youtube-cache.json` con dos arrays: `videos` y `shorts`.
+- **Actualización**: Se ejecuta automáticamente antes de cada `npm run build` (hook `prebuild`).
+- **Manual**: Puedes ejecutar `npm run fetch-youtube` para actualizar manualmente.
+
+**Configuración** (en `scripts/fetch-youtube.js`):
+- API Key: `AIzaSyDIKEMvb-ck2JgiMI-X-HDqJY9HdwQLPXA`
+- Channel ID: `UC-IxcQo3RGV6pAsmYpSKPEw`
+
+### Noticias (Content Collections)
+
+Las noticias se gestionan mediante archivos `.mdx` en `src/content/news/`. Para añadir una noticia, crea un nuevo archivo siguiendo el esquema en `src/content/config.ts`.
 
 ### Layout (`src/layouts/Layout.astro`)
 
@@ -38,9 +53,10 @@ Para añadir nuevo contenido, simplemente crea un nuevo archivo MDX en la carpet
 
 ## Próximos Pasos
 
-1.  **Integración YouTube**: Reemplazar los datos de ejemplo en `Videos.astro` con una llamada a la API de YouTube o un feed RSS.
+1.  ✅ **Integración YouTube**: Completado - Los videos se obtienen automáticamente de la API.
 2.  **Contenido Real**: Actualizar los textos de noticias y servicios con la información final.
 3.  **Formularios**: Conectar el botón de "Solicitar Asesoría" a un formulario real (Tally, Typeform o página de contacto).
+4.  **Automatización**: Configurar un cron job o GitHub Action para hacer rebuild cada 24h y mantener los videos actualizados.
 
 ## Visualización
 

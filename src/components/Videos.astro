@@ -1,11 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
+import youtubeData from '../data/youtube-cache.json';
 
-const videos = await getCollection('videos');
-// Sort by date if needed, or just take the first 4. 
-// Since date is a string "Hace X", sorting is tricky without real dates. 
-// For now, we'll just take them as they come (or we could add an 'order' field).
-const recentVideos = videos.slice(0, 4);
+// Take the first 8 videos for display
+const recentVideos = youtubeData.videos.slice(0, 8);
 ---
 
 <section id="videos" class="py-24 bg-white dark:bg-slate-950">
@@ -29,24 +26,28 @@ const recentVideos = videos.slice(0, 4);
 
     <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
       {recentVideos.map((video) => (
-        <a href={video.data.url} target="_blank" class="group block space-y-3">
+        <a href={video.url} target="_blank" class="group block space-y-3">
           <div class="relative aspect-video overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
-            <!-- Placeholder Gradient instead of real image for now -->
-            <div class={`absolute inset-0 bg-gradient-to-br from-primary-500/20 to-accent-500/20 transition-transform duration-300 group-hover:scale-105`}></div>
-            <div class="absolute inset-0 flex items-center justify-center">
+            <!-- Use real thumbnail if available, otherwise gradient -->
+            {video.thumbnail ? (
+              <img src={video.thumbnail} alt={video.title} class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+            ) : (
+              <div class="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-accent-500/20 transition-transform duration-300 group-hover:scale-105"></div>
+            )}
+            <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
                 <svg class="w-12 h-12 text-white opacity-80 group-hover:opacity-100 transition-opacity drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z" />
                 </svg>
             </div>
           </div>
           <div>
-            <h3 class="text-lg font-semibold text-slate-900 group-hover:text-primary-600 dark:text-white dark:group-hover:text-primary-400 leading-tight">
-              {video.data.title}
+            <h3 class="text-lg font-semibold text-slate-900 group-hover:text-primary-600 dark:text-white dark:group-hover:text-primary-400 leading-tight line-clamp-2">
+              {video.title}
             </h3>
             <div class="mt-2 flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
-              <span>{video.data.views} vistas</span>
+              <span>{video.views} vistas</span>
               <span>•</span>
-              <span>{video.data.date}</span>
+              <span>{video.date}</span>
             </div>
           </div>
         </a>

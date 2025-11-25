@@ -1,0 +1,175 @@
+{
+  "videos": [
+    {
+      "id": "E_KwnOxmHb0",
+      "title": "Crea un servidor con IA en minutos con este mini PC | Proxmox, Ollama y Laravel",
+      "thumbnail": "https://i.ytimg.com/vi/E_KwnOxmHb0/hqdefault.jpg",
+      "publishedAt": "2025-11-18T17:45:01Z",
+      "url": "https://www.youtube.com/watch?v=E_KwnOxmHb0",
+      "views": "2.0K",
+      "date": "Hace 1 semana",
+      "duration": "PT33M53S",
+      "durationSeconds": 2033,
+      "isShort": false
+    },
+    {
+      "id": "g_d1OaOHNqc",
+      "title": "Empezar en programación en 2026: mi experiencia, consejos y la verdad del sector",
+      "thumbnail": "https://i.ytimg.com/vi/g_d1OaOHNqc/hqdefault.jpg",
+      "publishedAt": "2025-11-17T20:00:38Z",
+      "url": "https://www.youtube.com/watch?v=g_d1OaOHNqc",
+      "views": "1.2K",
+      "date": "Hace 1 semana",
+      "duration": "PT33M26S",
+      "durationSeconds": 2006,
+      "isShort": false
+    },
+    {
+      "id": "EGK2q3KO4o0",
+      "title": "Cómo instalar Laravel + FilamentPHP v4 y FilamentShield para tu SaaS paso a paso",
+      "thumbnail": "https://i.ytimg.com/vi/EGK2q3KO4o0/hqdefault.jpg",
+      "publishedAt": "2025-10-27T16:45:00Z",
+      "url": "https://www.youtube.com/watch?v=EGK2q3KO4o0",
+      "views": "3.9K",
+      "date": "Hace 4 semanas",
+      "duration": "PT23M50S",
+      "durationSeconds": 1430,
+      "isShort": false
+    },
+    {
+      "id": "dy3kNsbfm2M",
+      "title": "Nuevo Rincón de Isma 🚀 | Un cambio de rumbo",
+      "thumbnail": "https://i.ytimg.com/vi/dy3kNsbfm2M/hqdefault.jpg",
+      "publishedAt": "2025-10-20T16:45:03Z",
+      "url": "https://www.youtube.com/watch?v=dy3kNsbfm2M",
+      "views": "1.3K",
+      "date": "Hace 1 mes",
+      "duration": "PT3M44S",
+      "durationSeconds": 224,
+      "isShort": false
+    },
+    {
+      "id": "JsefehIU9dI",
+      "title": "Aprende TDD en Laravel paso a paso | Tests primero, código después",
+      "thumbnail": "https://i.ytimg.com/vi/JsefehIU9dI/hqdefault.jpg",
+      "publishedAt": "2025-10-09T15:00:41Z",
+      "url": "https://www.youtube.com/watch?v=JsefehIU9dI",
+      "views": "980",
+      "date": "Hace 1 mes",
+      "duration": "PT11M38S",
+      "durationSeconds": 698,
+      "isShort": false
+    },
+    {
+      "id": "uM9wRT-s8MY",
+      "title": "Introducción a Laravel Cloud",
+      "thumbnail": "https://i.ytimg.com/vi/uM9wRT-s8MY/hqdefault.jpg",
+      "publishedAt": "2025-02-26T18:00:46Z",
+      "url": "https://www.youtube.com/watch?v=uM9wRT-s8MY",
+      "views": "10.7K",
+      "date": "Hace 9 meses",
+      "duration": "PT26M52S",
+      "durationSeconds": 1612,
+      "isShort": false
+    },
+    {
+      "id": "ycm4N0FCpRg",
+      "title": "🔴Charlas DEV: Laracon EU 2025",
+      "thumbnail": "https://i.ytimg.com/vi/ycm4N0FCpRg/hqdefault.jpg",
+      "publishedAt": "2025-02-04T07:06:45Z",
+      "url": "https://www.youtube.com/watch?v=ycm4N0FCpRg",
+      "views": "790",
+      "date": "Hace 9 meses",
+      "duration": "PT1H8M33S",
+      "durationSeconds": 4113,
+      "isShort": false
+    },
+    {
+      "id": "Mzy8Fs_zs3k",
+      "title": "🔴VLOG 5: Creando un producto hasta monetizarlo | Social Login",
+      "thumbnail": "https://i.ytimg.com/vi/Mzy8Fs_zs3k/hqdefault.jpg",
+      "publishedAt": "2025-01-28T06:42:22Z",
+      "url": "https://www.youtube.com/watch?v=Mzy8Fs_zs3k",
+      "views": "839",
+      "date": "Hace 10 meses",
+      "duration": "PT1H23M26S",
+      "durationSeconds": 5006,
+      "isShort": false
+    }
+  ],
+  "shorts": [
+    {
+      "id": "Cl42Q0IBzTU",
+      "title": "Componentes y Slots en Blade Laravel: Reutiliza Vistas Fácilmente",
+      "thumbnail": "https://i.ytimg.com/vi/Cl42Q0IBzTU/hqdefault.jpg",
+      "publishedAt": "2025-11-23T18:01:09Z",
+      "url": "https://www.youtube.com/watch?v=Cl42Q0IBzTU",
+      "views": "781",
+      "date": "Hace 2 días",
+      "duration": "PT58S",
+      "durationSeconds": 58,
+      "isShort": true
+    },
+    {
+      "id": "hUDz4ayBkzM",
+      "title": "Blade en Laravel: Plantillas, Directivas y Mejores Prácticas Esenciales",
+      "thumbnail": "https://i.ytimg.com/vi/hUDz4ayBkzM/hqdefault.jpg",
+      "publishedAt": "2025-11-23T00:00:43Z",
+      "url": "https://www.youtube.com/watch?v=hUDz4ayBkzM",
+      "views": "382",
+      "date": "Hace 2 días",
+      "duration": "PT1M2S",
+      "durationSeconds": 62,
+      "isShort": true
+    },
+    {
+      "id": "8rx2rFy2FMM",
+      "title": "Protección CSRF en Laravel: Cómo Asegurar Formularios Contra Ataques",
+      "thumbnail": "https://i.ytimg.com/vi/8rx2rFy2FMM/hqdefault.jpg",
+      "publishedAt": "2025-11-22T18:01:15Z",
+      "url": "https://www.youtube.com/watch?v=8rx2rFy2FMM",
+      "views": "1.2K",
+      "date": "Hace 3 días",
+      "duration": "PT47S",
+      "durationSeconds": 47,
+      "isShort": true
+    },
+    {
+      "id": "dglG2Y7o3Zc",
+      "title": "Middleware en Laravel: Qué son y Cómo Usarlos Fácil y Rápido",
+      "thumbnail": "https://i.ytimg.com/vi/dglG2Y7o3Zc/hqdefault.jpg",
+      "publishedAt": "2025-11-22T00:00:45Z",
+      "url": "https://www.youtube.com/watch?v=dglG2Y7o3Zc",
+      "views": "1.2K",
+      "date": "Hace 3 días",
+      "duration": "PT1M13S",
+      "durationSeconds": 73,
+      "isShort": true
+    },
+    {
+      "id": "Ip3eUEQMU9E",
+      "title": "Resource Controllers en Laravel: Aprende RESTful en solo un minuto",
+      "thumbnail": "https://i.ytimg.com/vi/Ip3eUEQMU9E/hqdefault.jpg",
+      "publishedAt": "2025-11-21T18:01:14Z",
+      "url": "https://www.youtube.com/watch?v=Ip3eUEQMU9E",
+      "views": "1.0K",
+      "date": "Hace 4 días",
+      "duration": "PT1M14S",
+      "durationSeconds": 74,
+      "isShort": true
+    },
+    {
+      "id": "VYHqbSbXb20",
+      "title": "Controladores en Laravel: Aprende básicos y Single Action en 1 minuto",
+      "thumbnail": "https://i.ytimg.com/vi/VYHqbSbXb20/hqdefault.jpg",
+      "publishedAt": "2025-11-21T00:00:25Z",
+      "url": "https://www.youtube.com/watch?v=VYHqbSbXb20",
+      "views": "998",
+      "date": "Hace 4 días",
+      "duration": "PT1M13S",
+      "durationSeconds": 73,
+      "isShort": true
+    }
+  ],
+  "lastFetched": "2025-11-25T19:46:05.543Z"
+}

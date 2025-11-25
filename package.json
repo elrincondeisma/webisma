@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "fetch-youtube": "node scripts/fetch-youtube.js",
+    "prebuild": "npm run fetch-youtube"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.12",
