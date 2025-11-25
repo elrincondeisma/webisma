@@ -1,0 +1,101 @@
+---
+import ThreeBackground from "./ThreeBackground.astro";
+---
+
+<section class="relative overflow-hidden pt-32 pb-20 lg:pt-48 lg:pb-32">
+    <ThreeBackground />
+    <!-- Background Effects (kept as fallback/layering) -->
+    <div
+        class="absolute top-0 left-1/2 -z-10 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-primary-500/10 blur-[120px] dark:bg-primary-500/5"
+    >
+    </div>
+    <div
+        class="absolute bottom-0 right-0 -z-10 h-[400px] w-[400px] rounded-full bg-accent-500/20 blur-[100px] dark:bg-accent-500/10"
+    >
+    </div>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+        <div class="animate-fade-in-up">
+            <span
+                class="inline-block rounded-full bg-primary-100 px-4 py-1.5 text-sm font-semibold text-primary-700 dark:bg-primary-900/30 dark:text-primary-300 mb-6 border border-primary-200 dark:border-primary-800"
+            >
+                🚀 La comunidad #1 de Laravel en Español
+            </span>
+
+            <h1
+                class="mx-auto max-w-4xl text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-6xl lg:text-7xl"
+            >
+                Domina el ecosistema <br class="hidden sm:block" />
+                <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-500 dark:from-primary-400 dark:to-accent-400"
+                >
+                    Laravel Moderno
+                </span>
+            </h1>
+
+            <p
+                class="mx-auto mt-6 max-w-2xl text-lg text-slate-600 dark:text-slate-300 sm:text-xl"
+            >
+                Únete a "El Rincón de Isma", el punto de encuentro para
+                desarrolladores apasionados por Laravel, FilamentPHP, Livewire e
+                Inertia.
+            </p>
+
+            <div
+                class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+            >
+                <a
+                    href="https://www.youtube.com/@ElRinconDeIsma"
+                    target="_blank"
+                    class="w-full rounded-full bg-primary-600 px-8 py-4 text-base font-bold text-white shadow-lg shadow-primary-500/30 transition-all hover:bg-primary-700 hover:shadow-primary-500/40 hover:-translate-y-1 sm:w-auto"
+                >
+                    Ver Canal de YouTube
+                </a>
+                <a
+                    href="#servicios"
+                    class="w-full rounded-full border border-slate-200 bg-white px-8 py-4 text-base font-bold text-slate-700 shadow-sm transition-all hover:bg-slate-50 hover:text-primary-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700 sm:w-auto"
+                >
+                    Solicitar Asesoría
+                </a>
+            </div>
+
+            <!-- Social Proof / Stats -->
+            <div
+                class="mt-12 flex items-center justify-center gap-8 text-slate-500 dark:text-slate-400 grayscale opacity-70"
+            >
+                <!-- Icons or text for tech stack -->
+                <div class="flex flex-col items-center">
+                    <span
+                        class="font-bold text-2xl text-slate-900 dark:text-white"
+                        >+17K</span
+                    >
+                    <span class="text-sm">Suscriptores</span>
+                </div>
+                <div class="h-8 w-px bg-slate-200 dark:bg-slate-800"></div>
+                <div class="flex flex-col items-center">
+                    <span
+                        class="font-bold text-2xl text-slate-900 dark:text-white"
+                        >Laravel</span
+                    >
+                    <span class="text-sm">Expertos</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+</style>

@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+
+const news = await getCollection("news");
+// Sort by date if needed.
+const recentNews = news.slice(0, 3);
+---
+
+<section id="noticias" class="py-24 bg-slate-50 dark:bg-slate-900/50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2
+                class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl"
+            >
+                Noticias y Actualizaciones
+            </h2>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-3">
+            {
+                recentNews.map((item) => (
+                    <article class="flex flex-col rounded-2xl bg-white p-6 shadow-sm dark:bg-slate-800 border border-slate-100 dark:border-slate-700">
+                        <div class="mb-4">
+                            <span class="inline-flex items-center rounded-full bg-primary-100 px-3 py-1 text-xs font-medium text-primary-800 dark:bg-primary-900/30 dark:text-primary-300">
+                                {item.data.category}
+                            </span>
+                        </div>
+                        <h3 class="mb-2 text-xl font-bold text-slate-900 dark:text-white">
+                            <a
+                                href="#"
+                                class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                            >
+                                {item.data.title}
+                            </a>
+                        </h3>
+                        <p class="mb-4 flex-1 text-slate-600 dark:text-slate-400">
+                            {item.data.excerpt}
+                        </p>
+                        <div class="mt-auto border-t border-slate-100 pt-4 dark:border-slate-700">
+                            <time class="text-sm text-slate-500 dark:text-slate-500">
+                                {item.data.date}
+                            </time>
+                        </div>
+                    </article>
+                ))
+            }
+        </div>
+    </div>
+</section>
