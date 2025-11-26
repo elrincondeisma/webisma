@@ -1,6 +1,13 @@
 // Script to fetch YouTube videos and cache them
-const YOUTUBE_API_KEY = 'AIzaSyDIKEMvb-ck2JgiMI-X-HDqJY9HdwQLPXA';
-const CHANNEL_ID = 'UC-IxcQo3RGV6pAsmYpSKPEw';
+import 'dotenv/config';
+
+const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY;
+const CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID;
+
+if (!YOUTUBE_API_KEY || !CHANNEL_ID) {
+    console.error('❌ Missing environment variables: YOUTUBE_API_KEY or YOUTUBE_CHANNEL_ID');
+    process.exit(1);
+}
 const MAX_RESULTS = 30; // Fetch more to ensure we have enough after filtering
 
 async function fetchYouTubeVideos() {
